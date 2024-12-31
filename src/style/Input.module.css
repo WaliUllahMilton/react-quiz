@@ -1,0 +1,21 @@
+.input {
+  padding: 4px 24px 4px 8px;
+  width: 400px;
+  height: 40px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 8px;
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+.parent {
+  position: relative;
+}
+.icons {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}

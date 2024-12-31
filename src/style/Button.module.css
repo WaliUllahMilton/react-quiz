@@ -1,0 +1,11 @@
+.button {
+  border: none;
+  outline: none;
+  background-color: #00d967;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  padding: 6px 0;
+  text-transform: uppercase;
+  border-radius: 8px;
+}

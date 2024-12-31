@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand img {
+  width: 32px;
+  margin-right: 10px;
+}
+.brand h3 {
+  color: black;
+  font-weight: 600;
+}
+@media only screen and (max-width: 600px) {
+  .nav .brand h3 {
+    display: none;
+  }
+}
