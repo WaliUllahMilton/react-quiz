@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "../style/Checkbox.module.css";
-export const Checkbox = () => {
+export const Checkbox = ({ text, className }) => {
   return (
-    <label htmlFor="" className={classes.checkbox}>
-      <input type="checkbox" name="" id="" />
-      agree to the terms and conditions
+    <label htmlFor="checkbox" className={`${classes.checkbox} ${className}`}>
+      <input type="checkbox" name="checkbox" id="" />
+      {text}
     </label>
   );
 };

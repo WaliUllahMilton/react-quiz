@@ -1,0 +1,13 @@
+.checkbox {
+  background-color: #e1e5eb;
+  margin-top: 12px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  width: 49%;
+}
+.answer {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

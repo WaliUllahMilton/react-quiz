@@ -1,0 +1,15 @@
+.quiz {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 67vh;
+}
+p {
+  color: rgb(114, 110, 110);
+  margin: 16px 0;
+}
+hr {
+  color: rgb(114, 110, 110);
+}
