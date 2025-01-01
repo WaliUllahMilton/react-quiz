@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 githuv.txt.pub
+.env.production.local

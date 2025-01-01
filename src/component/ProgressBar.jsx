@@ -1,5 +1,6 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import classes from "../style/ProgressBar.module.css";
 import { Button } from "./Button";
 export const ProgressBar = () => {
@@ -12,9 +13,11 @@ export const ProgressBar = () => {
         <span></span>
       </div>
       <div className={classes.parenButton}>
-        <Button text={`Next question`} className={classes.button}>
-          <FaChevronRight />
-        </Button>
+        <Link to="/result">
+          <Button text={`Next question`} className={classes.button}>
+            <FaChevronRight />
+          </Button>
+        </Link>
         <div className={classes.play}>
           <span className={classes.playIcon}>
             <FaPlay />

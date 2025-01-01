@@ -2,7 +2,7 @@ import React from "react";
 import classes from "../../style/Quiz.module.css";
 import { Answer } from "../Answer";
 import { ProgressBar } from "../ProgressBar";
-export const Quiz = () => {
+const Quiz = () => {
   return (
     <div className={classes.quiz}>
       <div>
@@ -15,3 +15,4 @@ export const Quiz = () => {
     </div>
   );
 };
+export default Quiz;
