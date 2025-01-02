@@ -1,17 +1,19 @@
-import image from "../assets/images/3.jpg";
+// import image from "../assets/images/3.jpg";
 import classes from "../style/Videos.module.css";
-export const Video = () => {
+export const Video = ({ title, noq, image }) => {
+  console.log(title);
   return (
     <div className={classes.video}>
       <div className={classes.image}>
-        <img src={image} alt="Video" />
+        <img
+          src={`http://img.youtube.com/vi/${image}/maxresdefault.jpg`}
+          alt="Video"
+        />
       </div>
-      <p className={classes.title}>
-        #23 React Hooks Bangla - React useReducer hook Bangla
-      </p>
+      <p className={classes.title}>{title}</p>
       <p>
-        <span>10 questions</span>
-        <span>Score : Not taken yet</span>
+        <span>{noq} Questions</span>
+        <span>Total points : {noq * 5}</span>
       </p>
     </div>
   );

@@ -14,8 +14,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route element={<PrivateRout />}>
-          <Route path="quiz" element={<Quiz />} />
-          <Route path="result" element={<Result />} />
+          <Route path="quiz/:id" element={<Quiz />} />
+          <Route path="result/:id" element={<Result />} />
         </Route>
         <Route path="signin" element={<Signin />} />
         <Route path="signup" element={<Signup />} />
