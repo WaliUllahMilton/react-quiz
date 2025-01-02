@@ -7,8 +7,8 @@
 .answer {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 1.6vw;
   justify-content: space-between;
   margin-top: 8px;
-  margin-bottom: 70px;
+  margin-bottom: 7vh;
 }

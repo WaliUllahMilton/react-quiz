@@ -9,6 +9,7 @@ export const Answer = ({ options, handleChange }) => {
           <Checkbox
             text={option.title}
             key={index}
+            htmlFor={index}
             checked={option.checked}
             className={classes.checkbox}
             onChange={(e) => handleChange(e, index)}

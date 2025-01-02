@@ -1,14 +1,13 @@
 .button {
   border: none;
-  /* width: 200px; */
   outline: none;
   background-color: #00d967;
   font-size: 15px;
   font-weight: 600;
   color: black;
-  padding: 6px 12px;
+  padding: 0.5vw 1vw;
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 1.3vh;
   cursor: pointer;
   border: 2px solid #00d967;
   transition: 0.4s;

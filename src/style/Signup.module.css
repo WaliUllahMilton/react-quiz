@@ -1,13 +1,19 @@
 .signup {
-  width: 72vw;
+  width: 90vw;
   margin: 0 auto;
 }
 .signup h1 {
-  margin-bottom: 40px;
+  margin-bottom: 2vh;
+  font-size: 3vh;
+  /* font-size: 10vw; */
 }
 .column {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10vw;
+  align-items: center;
+  width: 100%;
 }
 .signup p {
   text-align: center;

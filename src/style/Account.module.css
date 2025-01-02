@@ -1,13 +1,21 @@
 .account {
-  width: 50%;
+  width: 50vw;
   display: flex;
-  gap: 0.5rem;
+  gap: 4vh;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 30px;
-  font-size: 12px;
+  margin-right: 0.2vh;
 }
-
-.account > span:last-child {
+.username {
+  font-size: 2vh;
+}
+.logout {
+  font-size: 5vh;
   cursor: pointer;
+}
+.logout:hover {
+  cursor: pointer;
+}
+.userIcon {
+  font-size: 3vh;
 }

@@ -72,7 +72,11 @@ const Quiz = () => {
     const resultRef = ref(db, `result/${uid}`);
 
     await set(resultRef, { [id]: qna });
-    navigate(`/result/${id}`);
+    navigate(`/result/${id}`, {
+      state: {
+        qna,
+      },
+    });
   }
   return (
     <div className={classes.quiz}>

@@ -9,14 +9,16 @@ export default function Account() {
     <div className={classes.account}>
       {currentUser ? (
         <span className={classes.account}>
-          <FaUser />
-          <p>{currentUser.displayName}</p>
-          <span onClick={logout}>
+          <span className={classes.userIcon}>
+            <FaUser />
+          </span>
+          <p className={classes.username}>{currentUser.displayName}</p>
+          <span onClick={logout} className={classes.logout}>
             <IoIosLogOut />
           </span>
         </span>
       ) : (
-        <span className={classes.account}>
+        <span className={classes.account} style={{ margiRight: "0.2vh" }}>
           <Link to="/signup">Signup</Link>
           <Link to="/signin">Login</Link>
         </span>
