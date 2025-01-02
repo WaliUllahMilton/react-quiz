@@ -7,13 +7,16 @@ import Quiz from "./component/Pages/Quiz";
 import Result from "./component/Pages/Result";
 import Signin from "./component/Pages/Signin";
 import Signup from "./component/Pages/Signup";
+import PrivateRout from "./component/PrivateRout";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="quiz" element={<Quiz />} />
-        <Route path="result" element={<Result />} />
+        <Route element={<PrivateRout />}>
+          <Route path="quiz" element={<Quiz />} />
+          <Route path="result" element={<Result />} />
+        </Route>
         <Route path="signin" element={<Signin />} />
         <Route path="signup" element={<Signup />} />
       </Route>
