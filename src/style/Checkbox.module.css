@@ -2,4 +2,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: 0.4s all linear;
+}
+label {
+  font-size: 2vh;
+}
+.hover:hover {
+  background: rgba(22, 239, 255, 0.411);
+  cursor: pointer;
 }

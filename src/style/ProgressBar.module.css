@@ -28,8 +28,8 @@
 .progressCircle {
   position: absolute;
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   background-color: black;
   z-index: 999;
   bottom: 50%;
@@ -41,6 +41,7 @@
   position: relative;
   top: 50%;
   transform: translateY(-100%);
+  cursor: pointer;
 }
 .button {
   display: flex;
@@ -49,15 +50,16 @@
   padding: 0;
   font-size: 10px !important;
 }
-/* .parentButton {
-  /* height: 1; */
-/* } */
+.parenButton {
+  position: relative;
+}
 .play {
   position: absolute;
-  right: 138px;
-  bottom: 90px;
-  width: 27px;
-  height: 27px;
+  cursor: pointer;
+  right: -52px;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,15 +76,34 @@
   justify-content: center;
   font-size: 5px;
 }
-@media (min-width: 300px) and (max-width: 436px) {
-  .play {
-    right: 40px !important;
-    bottom: 163px !important;
-  }
+.percent {
+  position: absolute;
+  bottom: 40px;
+  right: 50%;
+  transform: translateX(50%);
+  background: black;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
 }
-@media (min-width: 440px) and (max-width: 700px) {
-  .play {
-    right: 60px !important;
-    bottom: 183px !important;
-  }
+.youtubePlayer {
+  bottom: 60px;
+  right: -15px;
+  padding: 4px;
+  background-color: white;
+}
+.closePlayer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.playerTitle {
+  font-size: 12px;
+  margin: 0 4px;
+  cursor: text;
 }

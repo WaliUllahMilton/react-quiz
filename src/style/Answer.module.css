@@ -12,3 +12,9 @@
   margin-top: 8px;
   margin-bottom: 7vh;
 }
+.correct {
+  background: rgba(22, 235, 104, 0.849);
+}
+.wrong {
+  background: rgba(230, 69, 69, 0.925);
+}

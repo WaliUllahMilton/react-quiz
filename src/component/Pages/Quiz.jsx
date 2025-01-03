@@ -1,7 +1,7 @@
 import { getDatabase, ref, set } from "firebase/database";
 import _ from "lodash";
 import React, { useEffect, useReducer, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import useQuestions from "../../hook/useQuestions";
 import classes from "../../style/Quiz.module.css";
@@ -27,6 +27,10 @@ const reducer = (state, action) => {
   }
 };
 const Quiz = () => {
+  const location = useLocation();
+  const { state } = location;
+  const { title } = state;
+  console.log(title);
   const { id } = useParams();
   const [currentQuestions, setCurrentQuestion] = useState(0);
   const { loading, error, questions } = useQuestions(id);
@@ -90,6 +94,7 @@ const Quiz = () => {
             <hr />
           </div>
           <Answer
+            input={true}
             options={qna[currentQuestions].options}
             handleChange={handleAnswerChange}
           />
@@ -98,6 +103,8 @@ const Quiz = () => {
             next={nextQuestion}
             percentage={percentage}
             submit={submit}
+            id={id}
+            title={title}
           />
         </>
       )}

@@ -19,10 +19,13 @@ export default function Videos() {
           loader={<h4>Loading...</h4>}
           next={() => setPage((prevPage) => prevPage + 8)}
         >
-          {videos.map((video) => (
-            <Link to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
+          {videos.map((video, index) => (
+            <Link
+              to={`/quiz/${video.youtubeID}`}
+              state={{ title: video.title }}
+              key={index}
+            >
               <Video
-                key={video.youtubeID}
                 title={video.title}
                 noq={video.noq}
                 image={video.youtubeID}

@@ -1,7 +1,6 @@
 // import image from "../assets/images/3.jpg";
 import classes from "../style/Videos.module.css";
 export const Video = ({ title, noq, image }) => {
-  console.log(title);
   return (
     <div className={classes.video}>
       <div className={classes.image}>

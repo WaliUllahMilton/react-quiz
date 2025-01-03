@@ -9,7 +9,7 @@ const Result = () => {
   const location = useLocation();
   const state = location.state;
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const { loading, error, answers } = useAnswers(id);
   if (!state) {
     console.log("no state found");
@@ -17,8 +17,8 @@ const Result = () => {
   }
   const { qna } = state;
 
-  console.log(qna);
-  console.log(answers);
+  // console.log(qna);
+  // console.log(answers);
 
   function calculateScore() {
     let score = 0;
@@ -37,15 +37,14 @@ const Result = () => {
           option.checked = true;
         }
       });
-
-      // Compare correctIndexes and checkedIndex once per question
       if (_.isEqual(correctIndexes, checkedIndex)) {
-        score += 5; // Increment score by 5 if they match
+        score += 5;
       }
     });
     return score;
   }
   let score = calculateScore();
+
   return (
     <div>
       {loading && <div>Loading.... </div>}
@@ -55,13 +54,13 @@ const Result = () => {
           <div className={classes.score}>
             <h3>
               you score is <br />
-              {score} out of 10
+              {score} out of {answers.length} Questions
             </h3>
             <div className={classes.img}>
               <img src={image} alt="result" />
             </div>
           </div>
-          <Analysis />
+          <Analysis answers={answers} />
         </div>
       )}
     </div>
