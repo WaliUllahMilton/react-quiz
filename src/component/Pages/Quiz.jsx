@@ -30,14 +30,12 @@ const Quiz = () => {
   const location = useLocation();
   const { state } = location;
   const { title } = state;
-  console.log(title);
   const { id } = useParams();
   const [currentQuestions, setCurrentQuestion] = useState(0);
   const { loading, error, questions } = useQuestions(id);
   const [qna, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
-  console.log(currentUser);
 
   useEffect(() => {
     dispatch({

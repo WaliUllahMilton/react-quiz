@@ -8,8 +8,7 @@ export const ProgressBar = ({ next, submit, prev, percentage, id, title }) => {
   const [showPercen, setShowPercen] = useState(false);
   const [showPlayer, setShowPlayer] = useState(true);
   const url = `https://www.youtube.com/watch?v=${id}`;
-  console.log(percentage);
-  console.log(showPercen);
+
   return (
     <div className={classes.progressBar}>
       <div className={classes.icons} onClick={prev}>

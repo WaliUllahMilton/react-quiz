@@ -28,7 +28,5 @@ a {
 }
 .error {
   color: red;
-  position: absolute;
-  bottom: 190px;
-  right: 235px;
+  margin: 0 auto;
 }
