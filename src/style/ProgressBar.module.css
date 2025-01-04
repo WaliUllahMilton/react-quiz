@@ -52,6 +52,7 @@
 }
 .parenButton {
   position: relative;
+  margin-left: 15px;
 }
 .play {
   position: absolute;

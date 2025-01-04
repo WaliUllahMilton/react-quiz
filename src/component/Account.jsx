@@ -13,9 +13,7 @@ export default function Account() {
             <FaUser />
           </span>
           <p className={classes.username}>{currentUser.displayName}</p>
-          <span onClick={logout} className={classes.logout}>
-            <IoIosLogOut />
-          </span>
+          <IoIosLogOut onClick={logout} className={classes.logout} />
         </span>
       ) : (
         <span className={classes.account} style={{ margiRight: "0.2vh" }}>
