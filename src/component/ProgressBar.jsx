@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
-import ReactPlayer from "react-player/youtube";
+import React, { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import classes from "../style/ProgressBar.module.css";
 import { Button } from "./Button";
+import MiniPlayer from "./MiniPlayer";
 export const ProgressBar = ({ next, submit, prev, percentage, id, title }) => {
-  const [showPercen, setShowPercen] = useState(false);
-  const [showPlayer, setShowPlayer] = useState(true);
-  const url = `https://www.youtube.com/watch?v=${id}`;
+  const shoPercent = useRef(null);
 
   return (
     <div className={classes.progressBar}>
@@ -21,11 +18,17 @@ export const ProgressBar = ({ next, submit, prev, percentage, id, title }) => {
         ></span>
         <span
           className={classes.progressCircle}
-          onMouseEnter={() => setShowPercen(true)}
-          onMouseLeave={() => setShowPercen(false)}
+          onMouseEnter={() => (shoPercent.current.style.display = "block")}
+          onMouseLeave={() => (shoPercent.current.style.display = "none")}
           style={{ left: `${percentage - 1}%`, cursor: "pointer" }}
         >
-          {showPercen && <span className={classes.percent}>{percentage}%</span>}
+          <span
+            ref={shoPercent}
+            className={classes.percent}
+            style={{ display: "none" }}
+          >
+            {percentage}%
+          </span>
         </span>
       </div>
       <div className={classes.parenButton}>
@@ -36,35 +39,9 @@ export const ProgressBar = ({ next, submit, prev, percentage, id, title }) => {
         >
           {percentage === 100 ? "" : <FaChevronRight />}
         </Button>
-        <div>
-          {showPlayer ? (
-            <div
-              style={{ position: "absolute" }}
-              className={classes.youtubePlayer}
-            >
-              <span
-                className={classes.closePlayer}
-                onClick={() => setShowPlayer(false)}
-              >
-                <ImCross />
-              </span>
-              <ReactPlayer
-                url={url}
-                width="200px"
-                height="168px"
-                playing={setShowPlayer}
-                controls
-              />
-              <p className={classes.playerTitle}>{title}</p>
-            </div>
-          ) : (
-            <div className={classes.play} onClick={() => setShowPlayer(true)}>
-              <span className={classes.playIcon}>
-                <FaPlay />
-              </span>
-            </div>
-          )}
-        </div>
+        {/* {/* <div> */}
+        <MiniPlayer title={title} id={id} />
+        {/* </div> */}
       </div>
     </div>
   );
