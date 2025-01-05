@@ -11,8 +11,8 @@
   min-width: 360px;
   max-width: 400px;
   /* max-height: 40vh; */
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 320px;
+  max-height: 350px;
   padding: 4px 4px 4px 4px;
   overflow: hidden;
   background-color: #fff;
@@ -41,4 +41,10 @@
 }
 .title {
   margin-left: 26px;
+}
+.video .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
 }

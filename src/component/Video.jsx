@@ -9,11 +9,13 @@ export const Video = ({ title, noq, image }) => {
           alt="Video"
         />
       </div>
-      <p className={classes.title}>{title}</p>
-      <p>
-        <span>{noq} Questions</span>
-        <span>Total points : {noq * 5}</span>
-      </p>
+      <div className={classes.bottom}>
+        <p className={classes.title}>{title}</p>
+        <p>
+          <span>{noq} Questions</span>
+          <span>Total points : {noq * 5}</span>
+        </p>
+      </div>
     </div>
   );
 };
