@@ -54,7 +54,7 @@ const Result = () => {
           <div className={classes.score}>
             <h3>
               you score is <br />
-              {score} out of {answers.length} Questions
+              {score} out of {answers.length * 5} Questions
             </h3>
             <div className={classes.img}>
               <img src={image} alt="result" />
