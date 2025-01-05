@@ -10,7 +10,7 @@ export default function Videos() {
 
   // console.log(videos);
   return (
-    <div>
+    <div className={classes.parentVideo}>
       {videos.length > 0 && (
         <InfiniteScroll
           className={classes.videos}

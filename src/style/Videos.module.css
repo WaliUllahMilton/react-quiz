@@ -3,10 +3,11 @@
   padding: 0 12px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 5vh;
   align-items: center;
 }
+
 .video {
   min-width: 360px;
   max-width: 400px;
